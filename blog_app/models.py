@@ -16,7 +16,7 @@ class Author(models.Model):
     def full_name(self):
         return f'{self.first_name} {self.last_name}'
 
-    def __str__(self):
+    def __str__(self): 
         return self.full_name()
 
 class Post(models.Model):
