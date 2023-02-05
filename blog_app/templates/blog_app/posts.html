@@ -39,7 +39,7 @@
             {% for post in all_posts %}
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="{% url 'post_detail' post.slug %}" class="block-20" style="background-image: url({% static 'images/'|add:post.image_name %});">
+                    <a href="{% url 'post_detail' post.slug %}" class="block-20" style="background-image: url({{post.image.url}});">
                     </a>
                     <div class="text p-4 float-right d-block">
                         <div class="topper d-flex align-items-center">
