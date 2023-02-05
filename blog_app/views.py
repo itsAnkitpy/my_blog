@@ -22,5 +22,6 @@ def post_detail(request,slug):
 
     context = {
         'post':identified_post,
+        'post_tags':identified_post.tags.all(),
     }
     return render(request, 'blog_app/post-detail.html',context)

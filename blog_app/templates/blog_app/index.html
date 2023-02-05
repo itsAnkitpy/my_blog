@@ -43,13 +43,13 @@
                 <div class="case">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-8 d-flex">
-                            <a href="{% url 'post_detail' 'slughere' %}" class="img w-100 mb-3 mb-md-0"
-                                style="background-image: url({% static 'images/image_1.jpg' %});"></a>
+                            <a href="{% url 'post_detail' post.slug %}" class="img w-100 mb-3 mb-md-0"
+                                style="background-image: url({% static 'images/'|add:post.image_name %});"></a>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-4 d-flex">
                             <div class="text w-100 pl-md-3">
                                 <span class="subheading">{{post.excerpt}}</span>
-                                <h2><a href="{% url 'post_detail' 'slughere' %}">{{post.title}}</a>
+                                <h2><a href="{% url 'post_detail' post.slug %}">{{post.title}}</a>
                                 </h2>
                                 <ul class="media-social list-unstyled">
                                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>

@@ -1,97 +1,54 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg')"
+<div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_2.jpg' %});"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate pb-5 text-center">
-                <h1 class="mb-3 bread">Blog Single</h1>
-                <p class="breadcrumbs">
-                    <span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span>
-                    <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span>
-                    <span>Blog Single <i class="ion-ios-arrow-forward"></i></span>
-                </p>
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+            data-scrollax-parent="true">
+            <div class="col-md-12 ftco-animate">
+                <h2 class="subheading">Hello! Welcome to</h2>
+                <h1 class="mb-4 mb-md-0">Ankit's blog</h1>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="text">
+                            <p>Hi, I'm a passionate software developer from India who enjoys exploring new technologies 
+                                and finding ways to integrate them into my projects. My goal is to constantly improve
+                                 and expand my skills to provide the best user experiences. Welcome to my personal blog
+                                 a where I share my experiences, insights, and code snippets.</p>
+                            <div class="mouse">
+                                <a href="#" class="mouse-icon">
+                                    <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 ftco-animate">
                 <p class="mb-5">
-                    <img src="images/image_1.jpg" alt="" class="img-fluid" />
+                    <img src="{% static 'images/'|add:post.image_name %}" alt="" class="img-fluid" />
                 </p>
                 <h2 class="mb-3">
-                    It is a long established fact a reader be distracted
+                    {{post.title}}
                 </h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis,
-                    eius mollitia suscipit, quisquam doloremque distinctio perferendis et
-                    doloribus unde architecto optio laboriosam porro adipisci sapiente
-                    officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore
-                    perferendis, enim praesentium omnis, iste doloremque quia officia
-                    optio deserunt molestiae voluptates soluta architecto tempora.
+                    {{post.content|linebreaks}}
                 </p>
-                <p>
-                    Molestiae cupiditate inventore animi, maxime sapiente optio, illo est
-                    nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni
-                    reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam
-                    incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore
-                    amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut
-                    ea, repudiandae suscipit!
-                </p>
-                <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
-                <p>
-                    Temporibus ad error suscipit exercitationem hic molestiae totam
-                    obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora
-                    maiores ex architecto voluptatum aut officia doloremque. Error dolore
-                    voluptas, omnis molestias odio dignissimos culpa ex earum nisi
-                    consequatur quos odit quasi repellat qui officiis reiciendis incidunt
-                    hic non? Debitis commodi aut, adipisci.
-                </p>
-                <p class="mb-5">
-                    <img src="images/image_2.jpg" alt="" class="img-fluid" />
-                </p>
-                <p>
-                    Quisquam esse aliquam fuga distinctio, quidem delectus veritatis
-                    reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur
-                    tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur
-                    suscipit veritatis nulla quos quia aspernatur perferendis, libero
-                    sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam,
-                    modi rem maiores.
-                </p>
-                <p>
-                    Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo
-                    velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa
-                    vel nisi in dolorum consequatur, veritatis porro explicabo soluta
-                    commodi libero voluptatem similique id quidem? Blanditiis voluptates
-                    aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam
-                    harum excepturi ea.
-                </p>
-                <p>
-                    Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam
-                    quidem, dolor distinctio similique asperiores voluptas enim,
-                    exercitationem ratione aut adipisci modi quod quibusdam iusto,
-                    voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur
-                    totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis.
-                    Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!
-                </p>
-                <p>
-                    Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus
-                    at officia adipisci quasi nemo a perspiciatis provident magni
-                    laboriosam repudiandae iure iusto commodi debitis est blanditiis alias
-                    laborum sint dolore. Dolores, iure, reprehenderit. Error provident,
-                    pariatur cupiditate soluta doloremque aut ratione. Harum voluptates
-                    mollitia illo minus praesentium, rerum ipsa debitis, inventore?
-                </p>
+                
+                
+                
                 <div class="tag-widget post-tag-container mb-5 mt-5">
                     <div class="tagcloud">
-                        <a href="#" class="tag-cloud-link">Life</a>
-                        <a href="#" class="tag-cloud-link">Sport</a>
-                        <a href="#" class="tag-cloud-link">Tech</a>
-                        <a href="#" class="tag-cloud-link">Travel</a>
+                        {% for tag in post_tags %}
+                            <a href="#" class="tag-cloud-link">{{tag.caption}}</a>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="about-author d-flex p-4 bg-light">
@@ -99,7 +56,7 @@
                         <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4" />
                     </div>
                     <div class="desc">
-                        <h3>George Washington</h3>
+                        <h3><a href="mailto:{{ post.author.email_address }}">{{post.author}}</a></h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
                             itaque, autem necessitatibus voluptate quod mollitia delectus aut,
