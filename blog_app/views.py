@@ -1,27 +1,30 @@
 from django.shortcuts import render,get_object_or_404
 from .models import *
+from django.views.generic import ListView,DetailView
 
-def index(request):
-    latest_posts = Post.objects.all().order_by('-date')[:3]
-     
-    context = {
-        'posts':latest_posts,
-    }
-    return render(request, 'blog_app/index.html',context)
+class IndexPageView(ListView):
+    template_name = 'blog_app/index.html'
+    model = Post
+    ordering = ['-date']
+    context_object_name = 'posts'
 
-def posts(request):
-    all_posts = Post.objects.all().order_by('-date')
-     
-    context = {
-        'all_posts':all_posts,
-    }
-    return render(request, 'blog_app/posts.html',context)
+    def get_queryset(self):
+        queryset =  super().get_queryset()
+        data = queryset[:3]
+        return data
 
-def post_detail(request,slug):
-    identified_post = get_object_or_404(Post, slug=slug)
+class AllPostsView(ListView):
+    template_name = 'blog_app/posts.html'
+    model = Post
+    ordering = ['-date']
+    context_object_name = 'all_posts'
 
-    context = {
-        'post':identified_post,
-        'post_tags':identified_post.tags.all(),
-    }
-    return render(request, 'blog_app/post-detail.html',context)
+class SinglePostView(DetailView):
+    template_name = 'blog_app/post-detail.html'
+    model = Post
+
+    def get_context_data(self, **kwargs):
+        context =  super().get_context_data(**kwargs)
+        context['post_tags'] = self.object.tags.all()
+        return context
+
